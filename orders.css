@@ -1,0 +1,312 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #2d3a4b;
+    color: #ecf0f1;
+    padding: 30px 20px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffd32a;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.nav-item {
+    color: #bdc3c7;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-item.active, .nav-item:hover {
+    background-color: #3d4f65;
+    color: #ffd32a;
+}
+
+.logout {
+    color: #e74c3c;
+    margin-top: auto;
+}
+
+/* Main Content */
+.content {
+    margin-left: 250px;
+    padding: 30px;
+    background-color: #f4f5f7;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header-title h1 {
+    font-size: 26px;
+    color: #333;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notification {
+    position: relative;
+    font-size: 24px;
+    color: #333;
+}
+
+.notification span {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ff6b6b;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 6px;
+    border-radius: 50%;
+}
+
+/* Hiệu ứng thay đổi màu khi di chuột */
+.notification:hover {
+    color: #3498db;
+}
+
+/* Thêm nhấp nháy cho số lượng thông báo */
+.notification span {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ff6b6b;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 6px;
+    border-radius: 50%;
+    animation: blink 1.5s infinite;
+}
+
+/* Keyframes cho hiệu ứng nhấp nháy */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Profile */
+.profile {
+    width: 40px; /* Giảm kích thước hiển thị */
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid #ddd; /* Thêm viền để nổi bật */
+    transition: border-color 0.3s ease;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo ảnh lấp đầy khung mà không bị méo */
+}
+
+/* Optional: Hiệu ứng khi di chuột */
+.profile:hover {
+    border-color: #3498db; /* Đổi màu viền khi di chuột */
+}
+
+/* General Styles for Content */
+.content {
+    margin-left: 250px;
+    padding: 30px;
+    background-color: #f4f5f7;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Order Table Styles */
+.order-table {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+/* Table Header and Controls */
+.table-header {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Adjust gap as needed */
+    margin-bottom: 20px;
+    justify-content: flex-start; /* Aligns all elements to the left */
+}
+
+.table-header span {
+    font-size: 14px;
+    color: #666;
+}
+
+.table-header select {
+    padding: 4px 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+}
+
+.search-bar {
+    padding: 4px 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    font-size: 14px;
+    color: #333;
+    margin-left: auto; /* Moves search bar to the right */
+}
+
+
+/* Table Styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+table th, table td {
+    padding: 15px;
+    text-align: left;
+    font-size: 14px;
+    color: #333;
+}
+
+table th {
+    background-color: #f4f5f7;
+    color: #333;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Status Colors */
+.status {
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    display: inline-block;
+}
+
+.status.paid {
+    background-color: #2ecc71;
+}
+
+.status.cod {
+    background-color: #f39c12;
+}
+
+.status.shipped {
+    background-color: #3498db;
+}
+
+.status.in-transit {
+    background-color: #f39c12;
+}
+
+.status.not-shipped {
+    background-color: #e74c3c;
+}
+
+.status.processing {
+    background-color: #3498db;
+}
+
+.status.delivered {
+    background-color: #2ecc71;
+}
+
+.status.cancelled {
+    background-color: #e74c3c;
+}
+
+/* Action Buttons */
+.btn-edit, .btn-delete {
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #3498db;
+    padding: 5px;
+}
+
+.btn-delete {
+    color: #e74c3c;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: 20px;
+    gap: 5px;
+}
+
+.pagination button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pagination button:hover {
+    background-color: #2980b9;
+}
+
+.pagination span {
+    padding: 8px 12px;
+    font-weight: bold;
+    color: #333;
+}
+

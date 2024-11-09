@@ -1,0 +1,409 @@
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #2d3a4b;
+    color: #ecf0f1;
+    padding: 30px 20px;
+    z-index: 2;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffd32a;
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.nav-item {
+    color: #bdc3c7;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-item.active, .nav-item:hover {
+    background-color: #3d4f65;
+    color: #ffd32a;
+}
+
+.logout {
+    color: #e74c3c;
+    margin-top: auto;
+}
+
+/* Main Content */
+.content {
+    margin-left: 250px;
+    padding: 30px;
+    background-color: #f4f5f7;
+    min-height: 100vh;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header-title h1 {
+    font-size: 26px;
+    color: #333;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notification {
+    position: relative;
+    font-size: 24px;
+    color: #333;
+}
+
+.notification span {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ff6b6b;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 6px;
+    border-radius: 50%;
+}
+
+/* Hiệu ứng thay đổi màu khi di chuột */
+.notification:hover {
+    color: #3498db;
+}
+
+/* Thêm nhấp nháy cho số lượng thông báo */
+.notification span {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ff6b6b;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 6px;
+    border-radius: 50%;
+    animation: blink 1.5s infinite;
+}
+
+/* Keyframes cho hiệu ứng nhấp nháy */
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Profile */
+.profile {
+    width: 40px; /* Giảm kích thước hiển thị */
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid #ddd; /* Thêm viền để nổi bật */
+    transition: border-color 0.3s ease;
+}
+
+.profile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Đảm bảo ảnh lấp đầy khung mà không bị méo */
+}
+
+/* Optional: Hiệu ứng khi di chuột */
+.profile:hover {
+    border-color: #3498db; /* Đổi màu viền khi di chuột */
+}
+
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.header-title h1 {
+    font-size: 26px;
+    color: #333;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.notification {
+    position: relative;
+    font-size: 24px;
+    color: #333;
+}
+
+.notification span {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: #ff6b6b;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 6px;
+    border-radius: 50%;
+}
+
+/* Security Settings Sidebar */
+.security-sidebar {
+    position: fixed;
+    top: 80px; /* Adjusts position down to avoid header */
+    left: 250px; /* Keeps it to the right of the main sidebar */
+    width: 200px; /* Adjust width for a closer layout */
+    background-color: #ecf0f1;
+    padding: 15px;
+    height: calc(100% - 80px); /* Leaves space for the header */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+.security-sidebar .nav {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.security-sidebar .nav-item {
+    color: #34495e;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.security-sidebar .nav-item.active,
+.security-sidebar .nav-item:hover {
+    background-color: #bdc3c7;
+    color: #2d3a4b;
+}
+
+/* Security Content */
+.security-content {
+    margin-left: 470px; /* Reduced to bring it closer to the sidebar */
+    padding: 20px;
+    background-color: #ffffff;
+    min-height: 100vh;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.security-section {
+    display: none;
+    padding: 30px;
+}
+
+.security-section.active {
+    display: block;
+}
+
+.security-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #2d3a4b;
+}
+
+/* Form Styling */
+.security-section form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 500px; /* Limits the form width for better readability */
+    margin: auto; 
+}
+
+.security-section label {
+    font-size: 14px;
+    color: #333;
+}
+
+.security-section input[type="password"] {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #bdc3c7;
+    border-radius: 6px;
+    transition: border-color 0.3s ease;
+}
+
+.security-section input[type="password"]:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.security-section button[type="submit"] {
+    padding: 12px;
+    font-size: 14px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.security-section button[type="submit"]:hover {
+    background-color: #2980b9;
+}
+
+/* Table Styling */
+.security-section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.security-section th,
+.security-section td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ecf0f1;
+}
+
+.security-section th {
+    background-color: #f4f5f7;
+    color: #333;
+}
+
+.security-section td {
+    color: #555;
+}
+
+.btn-logout {
+    padding: 8px 12px;
+    font-size: 12px;
+    color: #fff;
+    background-color: #e74c3c;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: #c0392b;
+}
+
+/* Toggle Switch for Alerts */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 20px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 14px;
+    width: 14px;
+    left: 3px;
+    bottom: 3px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #3498db;
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+/* Button Styling for Details and Sessions */
+.btn-detail,
+.btn-change-password,
+.btn-enable-mfa,
+.btn-check-sessions {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #fff;
+    background-color: #3498db;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+}
+
+.btn-detail:hover,
+.btn-change-password:hover,
+.btn-enable-mfa:hover,
+.btn-check-sessions:hover {
+    background-color: #2980b9;
+}
+
+/* Utility Styles */
+.security-section p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
